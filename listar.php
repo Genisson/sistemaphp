@@ -33,7 +33,7 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<?php								
-							echo "<li><a href='#'><span class='glyphicon glyphicon-user'></span> ".$_SESSION['nombreusu']."</a></li>";
+							echo "<li><a href='#'><span class='glyphicon glyphicon-user'></span> ".$_SESSION['nomeusu']."</a></li>";
 						?>				      
 				    </ul>			
 				</div>
@@ -105,7 +105,7 @@
                        			<input class="form-control" id="endereco" name="endereco" type="text" placeholder="Endereço"></input>
                        		</div>
 
-							<input type="submit" class="btn btn-success" value="Salvar">
+							<input type="submit" name="salvar" class="btn btn-success" value="Salvar">
                        </form>
                     </div>
                     <div class="modal-footer">

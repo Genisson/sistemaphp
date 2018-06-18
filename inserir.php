@@ -9,7 +9,5 @@
 			
 	?>	
 
-		    <SCRIPT LANGUAGE="javascript"> 
-            alert("Contato Registrado"); 
-            </SCRIPT> 
+		    
             <META HTTP-EQUIV="Refresh" CONTENT="0; URL=listar.php">

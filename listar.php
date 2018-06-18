@@ -119,7 +119,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <button type="button"   class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4>Editar Contato</h4>
                     </div>
                     <div class="modal-body">                      
@@ -139,7 +139,9 @@
 		                       			<input class="form-control" id="endereco" name="endereco" type="text" ></input>
 		                       		</div>
 
-									<input type="submit" class="btn btn-success">							
+									<input type="submit" name="enviar" class="btn btn-success" >	
+									<button type="reset" name="limpar" class="btn btn-warning" >Limpar</button>
+
                        </form>
                     </div>
                     <div class="modal-footer">
@@ -156,14 +158,12 @@
 	<script src="js/bootstrap.min.js"></script>		
 	<script>			 
 		  $('#editUsu').on('show.bs.modal', function (event) {
-		  var button = $(event.relatedTarget) // Button that triggered the modal
+		  var button = $(event.relatedTarget) 
 		  var recipient0 = button.data('id')
 		  var recipient1 = button.data('nome')
 		  var recipient2 = button.data('idade')
 		  var recipient3 = button.data('endereco')
-		   // Extract info from data-* attributes
-		  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-		  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+		 
 		 
 		  var modal = $(this)		 
 		  modal.find('.modal-body #id').val(recipient0)

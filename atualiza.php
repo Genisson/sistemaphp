@@ -12,9 +12,7 @@ session_start();
 	$sql = $mysqli->query("update tbcontatos set nome='$nome', idade=$idade, endereco='$end' where id=$id");
 ?>	
 
-	 <SCRIPT LANGUAGE="javascript"> 
-         alert("Contato Atualizado"); 
-     </SCRIPT> 
+	 
      <META HTTP-EQUIV="Refresh" CONTENT="0; URL=listar.php">
 
 

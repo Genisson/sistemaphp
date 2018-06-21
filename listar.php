@@ -94,15 +94,15 @@
                        <form action="inserir.php" method="GET">              		
                        		<div class="form-group">
                        			<label for="nome">Nome:</label>
-                       			<input class="form-control" id="nome" name="nome" type="text" placeholder="Nome"></input>
+                       			<input class="form-control" id="nome1" name="nome" type="text" placeholder="Nome"></input>
                        		</div>
                        		<div class="form-group">
                        			<label for="idade">Idade:</label>
-                       			<input class="form-control" id="idade" name="idade" type="text" placeholder="Idade"></input>
+                       			<input class="form-control" id="idade1" name="idade" type="text" placeholder="Idade"></input>
                        		</div>
                        		<div class="form-group">
                        			<label for="endereco">Endereço:</label>
-                       			<input class="form-control" id="endereco" name="endereco" type="text" placeholder="Endereço"></input>
+                       			<input class="form-control" id="endereco1" name="endereco" type="text" placeholder="Endereço"></input>
                        		</div>
 
 							<input type="submit" name="salvar" class="btn btn-success" value="Salvar">

@@ -23,7 +23,7 @@
 				<div class="collapse navbar-collapse" id="navegacion-fm">
 					<ul class="nav navbar-nav">
 						<li><a href="#"><span class="glyphicon glyphicon-home"></span>Home</a></li>							
-						<li><a href="#"><span class="glyphicon glyphicon-plus-sign"></span>Registrar</a></li>						
+						<li><a href="cadastro.php"><span class="glyphicon glyphicon-plus-sign"></span>Registrar</a></li>						
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href='#'><span class='glyphicon glyphicon-user'></span></a></li>										      

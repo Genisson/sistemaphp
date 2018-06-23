@@ -48,7 +48,7 @@
 			<a class="btn btn-success" data-toggle="modal" data-target="#nuevoUsu">Novo Usuário</a><br><br>
 			<table class='table'>
 				<tr>
-					<th>Id</th><th>Login</th><th>Senha</th><th>Nome</th><th>Perfil</th><th><span class="glyphicon glyphicon-wrench"></span></th>
+					<th>Id</th><th>Login</th><th>Nome</th><th>Perfil</th><th><span class="glyphicon glyphicon-wrench"></span></th>
 				</tr>			
 <?php
 			$mysqli = new mysqli("localhost", "root", "", "bdpessoa");		
@@ -62,9 +62,9 @@
 				while ($fila = $resultado->fetch_row()) 
 				{					
 					echo "<tr>";
-					echo "<td>$fila[0]</td><td>$fila[1]</td><td>$fila[2]</td><td>$fila[3]</td><td>$fila[4]</td>";	
+					echo "<td>$fila[0]</td><td>$fila[1]</td><td>$fila[3]</td><td>$fila[4]</td></td>";	
 					echo"<td>";						
-				    echo "<a data-toggle='modal' data-target='#editUsu' data-id='" .$fila[0] ."' data-login='" .$fila[1] ."' data-pass='" .$fila[2] ."' data-nome='" .$fila[3] ."' data-perfil='" .$fila[4] ."' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span>Editar</a> ";			
+				    echo "<a data-toggle='modal' data-target='#editUsu' data-id='" .$fila[0] ."' data-login='" .$fila[1] ."' data-pass='" .$fila[2] ."' data-nome='" .$fila[3] ."' data-perfil='" .$fila[4] ."' data-ativo='" .$fila[5] ."' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span>Editar</a> ";			
 					echo "<a class='btn btn-danger' href='elimina_usu.php?id=" .$fila[0] ."'><span class='glyphicon glyphicon-remove'></span>Eliminar</a>";		
 					echo "</td>";
 					echo "</tr>";
@@ -96,7 +96,7 @@
                        		</div>
                        		<div class="form-group">
                        			<label for="pass">Senha:</label>
-                       			<input class="form-control" id="pass" name="pass" type="text" placeholder="senha"></input>
+                       			<input class="form-control" id="pass" name="pass" type="password" placeholder="senha"></input>
                        		</div>
                        		<div class="form-group">
                        			<label for="nome">Nome:</label>
@@ -134,16 +134,16 @@
                         <h4>Editar Usuário</h4>
                     </div>
                     <div class="modal-body">                      
-                       <form action="atualiza.php" method="POST">                       		
+                       <form action="atualiza_usu.php" method="POST">                       		
                        		        
                        		        <input  id="id" name="id" type="hidden" ></input>   		
 		                       		<div class="form-group">
 		                       			<label for="login">Login:</label>
-		                       			<input class="form-control" id="nome" name="nome" type="text" ></input>
+		                       			<input class="form-control" id="login" name="login" type="text" ></input>
 		                       		</div>
 		                       		<div class="form-group">
 		                       			<label for="pass">Senha:</label>
-		                       			<input class="form-control" id="pass" name="pass" type="text" ></input>
+		                       			<input class="form-control" id="pass" name="pass" type="password" ></input>
 		                       		</div>
 		                       		<div class="form-group">
 		                       			<label for="pass">Nome:</label>
@@ -153,6 +153,12 @@
 									<div class="form-group">
                        			<label for="perfil">Perfil:</label>
                        			<input class="form-control" id="perfil" name="perfil" type="text" placeholder="perfil"></input>
+								
+								</div>
+								
+								<div class="form-group">
+                       			<label for="perfil">Ativo:</label>
+                       			<input class="form-control" id="ativo" name="ativo" type="text" placeholder="ativo"></input>
 								
 								</div>
 
@@ -180,6 +186,7 @@
 		  var recipient2 = button.data('pass')
 		  var recipient3 = button.data('nome')
 		  var recipient4 = button.data('perfil')
+		  var recipient5 = button.data('ativo')
 		 
 		 
 		  var modal = $(this)		 
@@ -187,7 +194,8 @@
 		  modal.find('.modal-body #login').val(recipient1)
 		  modal.find('.modal-body #pass').val(recipient2)
 		  modal.find('.modal-body #nome').val(recipient3)
-          modal.find('.modal-body #perfil').val(recipient4)			  
+          modal.find('.modal-body #perfil').val(recipient4)
+          modal.find('.modal-body #ativo').val(recipient5)			  
 		});
 		
 	</script>

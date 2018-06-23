@@ -28,7 +28,7 @@
 				</div>
 				<div class="collapse navbar-collapse" id="navegacion-fm">
 					<ul class="nav navbar-nav">
-						<li><a href="#"><span class="glyphicon glyphicon-home"></span>Home</a></li>							
+						<li><a href="index.php"><span class="glyphicon glyphicon-home"></span>Home</a></li>							
 						<li><a href="sair.php"><span class="glyphicon glyphicon-remove"></span>Sair</a></li>						
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
